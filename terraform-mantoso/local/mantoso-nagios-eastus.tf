@@ -2,7 +2,7 @@
 # Appllicaiton name = nagios
 
 locals {
-  mantoso_nagios_eastus_application_name              = "sensu"
+  mantoso_nagios_eastus_application_name              = "nagios"
   mantoso_nagios_eastus_location                      = "eastus"
   mantoso_nagios_eastus_rg_lock_level                 = null                                            # null, CanNotDelete or ReadOnly
   mantoso_nagios_eastus_subnet_address_prefix_public  = ["10.0.1.0/28", "10.0.1.16/28", "10.0.1.32/28"] # 10.0.1.48/28
