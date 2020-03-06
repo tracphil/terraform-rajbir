@@ -10,7 +10,7 @@ locals {
 }
 
 module "mantoso_nagios_eastus_resource_group" {
-  source = "../../modules/azurerm-resource-group"
+  source = "../../modules/terraform-azurerm-resource-group"
 
   location      = local.mantoso_nagios_eastus_location
   rg_lock_level = local.mantoso_nagios_eastus_rg_lock_level
@@ -21,7 +21,7 @@ module "mantoso_nagios_eastus_resource_group" {
 
 
 module "mantoso_nagios_eastus_virtual_network" {
-  source = "../../modules/azurerm-virtual-network"
+  source = "../../modules/terraform-azurerm-virtual-network"
 
   address_space       = local.mantoso_nagios_eastus_virtual_network_address_space
   location            = module.mantoso_nagios_eastus_resource_group.location
@@ -33,7 +33,7 @@ module "mantoso_nagios_eastus_virtual_network" {
 
 
 module "mantoso_nagios_eastus_subnet_public" {
-  source = "../../modules/azurerm-subnet"
+  source = "../../modules/terraform-azurerm-subnet"
 
   address_prefix       = local.mantoso_nagios_eastus_subnet_address_prefix_public
   name                 = local.mantoso_nagios_eastus_application_name
